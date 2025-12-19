@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Forms Showcase</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">MyWebsite</div>
+
+   
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    
+    <nav class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    
+    <section class="form-card">
+        <h2>Login</h2>
+        <form novalidate>
+            <div class="field">
+                <input type="email" id="loginEmail" required>
+                <label for="loginEmail">Email Address</label>
+            </div>
+
+            <div class="field">
+                <input type="password" id="loginPassword"
+                       required minlength="6"
+                       pattern=".{6,}">
+                <label for="loginPassword">Password</label>
+            </div>
+
+            <button type="submit">Sign In</button>
+        </form>
+    </section>
+
+    
+    <section class="form-card">
+        <h2>Registration</h2>
+        <form novalidate>
+            <div class="field">
+                <input type="text" id="regName"
+                       required minlength="3"
+                       pattern="[A-Za-z ]{3,}">
+                <label for="regName">Full Name</label>
+            </div>
+
+            <div class="field">
+                <input type="email" id="regEmail" required>
+                <label for="regEmail">Email</label>
+            </div>
+
+            <div class="field">
+                <input type="password" id="regPassword"
+                       required minlength="8"
+                       pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}">
+                <label for="regPassword">Password</label>
+            </div>
+
+            <div class="field">
+                <input type="number" id="regAge"
+                       required min="8" max="99">
+                <label for="regAge">Age</label>
+            </div>
+
+            <div class="checkbox">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">I agree to the Terms & Conditions</label>
+            </div>
+
+            <button type="submit">Create Account</button>
+        </form>
+    </section>
+
+    
+    <section class="form-card">
+        <h2>Feedback</h2>
+        <form novalidate>
+            <div class="field">
+                <input type="text" id="fbName" required minlength="3">
+                <label for="fbName">Your Name</label>
+            </div>
+
+            <div class="field">
+                <input type="email" id="fbEmail" required>
+                <label for="fbEmail">Your Email</label>
+            </div>
+
+            <div class="field">
+                <textarea id="fbMessage"
+                          required minlength="20"></textarea>
+                <label for="fbMessage">Your Feedback</label>
+            </div>
+
+           
+
+            <button type="submit">Send Feedback</button>
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2025 Forms Showcase</p>
+</footer>
+
+</body>
+</html>
